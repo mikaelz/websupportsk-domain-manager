@@ -4,7 +4,7 @@ function showTypeRows(el) {
     document.getElementById('port').style.display = 'none';
     document.getElementById('weight').style.display = 'none';
 
-    switch (el.value) {
+    switch (el.value.toLowerCase()) {
         case 'mx':
             document.getElementById('prio').style.display = 'table-row';
             break;
