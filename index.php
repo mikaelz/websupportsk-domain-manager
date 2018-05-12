@@ -39,6 +39,8 @@ require __DIR__.'/bootstrap.php';
         <?php require __DIR__.'/records.php'; ?>
     <?php elseif (!empty($_GET['record_add'])) : ?>
         <?php require __DIR__.'/record_add.php'; ?>
+    <?php elseif (!empty($_GET['record_edit'])) : ?>
+        <?php require __DIR__.'/record_edit.php'; ?>
     <?php else : ?>
         <?php require __DIR__.'/domains.php'; ?>
     <?php endif; ?>

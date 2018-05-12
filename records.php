@@ -19,7 +19,7 @@ foreach ($records['items'] as $record) {
         <td>'.$record['name'].'</td>
         <td>'.$record['content'].'</td>
         <td>'.$record['ttl'].'</td>
-        <td><a href="?record_edit='.$record['id'].'">Edit</a></td>
+        <td><a href="?record_domain='.$domain.'&record_edit='.$record['id'].'">Edit</a></td>
         <td><a href="?record_del='.$record['id'].'" onclick="return confirm(\'Really remove?\')">Delete</a></td>
     </tr>';
 }
