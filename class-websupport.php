@@ -12,6 +12,20 @@ class Api
     private $auth_token;
 
     /**
+     * @var array $record_types
+     */
+    public const RECORD_TYPES = [
+        'A',
+        'AAAA',
+        'ANAME',
+        'CNAME',
+        'MX',
+        'NS',
+        'SRV',
+        'TXT',
+    ];
+
+    /**
      * Constructor
      *
      * @param string $auth_token Auth token.
@@ -42,7 +56,7 @@ class Api
         $ch = curl_init(self::API_URL.$query);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $response = curl_exec($ch);
         curl_close($ch);
