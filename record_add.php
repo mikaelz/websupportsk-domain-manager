@@ -53,7 +53,9 @@ $domain = $_GET['record_add'];
         </tr>
         <tr>
             <th>&nbsp;</th>
-            <td><button type="submit" name="record_save">Save new record</button></td>
+            <td><button type="submit" name="record_save">Save new record</button>
+                <a href="?domain=<?php echo $domain; ?>">Return to listing</a>
+            </td>
         </tr>
     </table>
 </form>
