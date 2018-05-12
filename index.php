@@ -35,7 +35,14 @@ require __DIR__.'/bootstrap.php';
             </table>
         </form>
     </fieldset>
+    <?php elseif (!empty($_GET['domain'])) : ?>
+        <?php require __DIR__.'/records.php'; ?>
+    <?php elseif (!empty($_GET['record_add'])) : ?>
+        <?php require __DIR__.'/record_add.php'; ?>
+    <?php else : ?>
+        <?php require __DIR__.'/domains.php'; ?>
     <?php endif; ?>
 </div>
+<script src="<?php echo BASE_URL; ?>/js/script.js"></script>
 </body>
 </html>
