@@ -17,6 +17,7 @@ try {
     $ws_user = $ws->request('/user');
     if ($ws_user['items'][0]['active']) {
         $_SESSION['auth_token'] = $auth_token;
+        $_SESSION['user'] = $ws_user['items'][0];
     }
 } catch (\Exception $e) {
     $_SESSION['message'] = '<div class="notice">'.$e->getMessage().'</div>';
