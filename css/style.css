@@ -36,6 +36,21 @@
     color: #4f8a10;
 }
 
+.btn {
+    background: #337ab7;
+    color: #fff;
+    display: inline-block;
+    padding: .5em;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+}
+
+.hide {
+    display: none;
+}
+
 @media only screen and (max-width: 500px) {
     .login td {
         display: block;
