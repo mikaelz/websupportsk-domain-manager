@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.login {
+    width: 50%;
+}
+
+.info,
+.error,
+.notice,
+.success {
+    background: #bde5f8;
+    border: 2px solid #00529b;
+    color: #00529b;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.error {
+    border-color: #d8000c;
+    background-color: #ffd2d2;
+    color: #d8000c;
+}
+.notice {
+    border-color: #9f6000;
+    background-color: #feefb3;
+    color: #9f6000;
+}
+.success {
+    border-color: #4f8a10;
+    background-color: #dff2bf;
+    color: #4f8a10;
+}
+
+@media only screen and (max-width: 500px) {
+    .login td {
+        display: block;
+        width: 100%;
+    }
+}
